@@ -4,7 +4,7 @@ import Header from './Header';
 const Home = () => {
     return (
         <div>
-            
+            <h3>hello</h3>
         </div>
     );
 };
