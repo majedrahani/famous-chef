@@ -21,22 +21,24 @@ const ChefDetails = () => {
                         <p className='w-[70%] pl-2 py-3'>{bio}</p>
                         <p className='mt-0 text-[12px] font-medium'>Years of Experience : <span className='bg-[#7ED957] px-1 rounded font-bold'>{yearsOfExperience}</span> </p>
                         <p className='mt-0 text-[12px] font-medium'>Numbers Of recipes: <span className='bg-[#7ED957] px-1 rounded font-bold'>{numberOfRecipes}</span></p>
-                        <h2><HiThumbUp></HiThumbUp> {numberOfLikes}</h2>
+                        <h2 className='flex gap-2'><HiThumbUp className='my-auto'></HiThumbUp>  <span
+                            className='bg-[#7ED957] px-1 rounded '
+                        >{numberOfLikes}</span></h2>
                     </div>
                     <img className='w-[400px] ' src={bannerPicture} alt="" />
                 </div>
             </div>
 
             {/* recipes card */}
-             
-             <div className='grid grid-cols-1 gap-4 px-32 py-24'>
+
+            <div className='grid grid-cols-1 gap-4 px-32 py-24'>
                 {
-                   recipes.map(recipe => <RecipeCard
-                   key={recipe.name}
-                   recipe={recipe}
-                   ></RecipeCard>) 
+                    recipes.map(recipe => <RecipeCard
+                        key={recipe.name}
+                        recipe={recipe}
+                    ></RecipeCard>)
                 }
-             </div>
+            </div>
         </div>
     );
 };

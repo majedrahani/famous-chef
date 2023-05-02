@@ -7,7 +7,7 @@ const NavigationBer = () => {
         <div className='flex justify-between px-8 mx-12 bg-white '>
             <img className='w-[120px]' src={logo} alt="" />
             <div className="flex gap-4 ">
-                <Link className='my-auto'>Home</Link>
+                <Link to='/' className='my-auto'>Home</Link>
                 <Link className='my-auto'>Blog</Link>
             </div>
             <h3 className='my-auto'>Profile</h3>
