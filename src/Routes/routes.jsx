@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import Home from "../components/Home";
+import Details from "../layouts/Details";
+import ChefDetails from "../components/ChefDetails";
 
 const router = createBrowserRouter([
     {
@@ -13,6 +15,16 @@ const router = createBrowserRouter([
         }
       ]
     },
+    {
+      path: "details",
+      element: <Details></Details>,
+      children: [
+        {
+          path: ":id",
+          element: <ChefDetails></ChefDetails>
+        }
+      ]
+    }
   ]);
 
 export default router

@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-card{
+    background-color: #7ED957;
+    color: rgb(20, 0, 0);
+    font-size: 18px;
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 5px;
+}
