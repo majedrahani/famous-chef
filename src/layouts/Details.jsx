@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
 const Details = () => {
     return (
         <div>
-            <NavigationBer></NavigationBer>
+            
             <Outlet></Outlet>
             <Footer></Footer>
         </div>
