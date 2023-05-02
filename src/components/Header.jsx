@@ -14,7 +14,7 @@ const Header = () => {
                     <small>Contact</small>
                     <p>Phone: +0347347</p>
                     <p>Email: famous@chef.columns-6</p>
-                    <button className='text-white  font-bold mt-2 bg-[#2e8d05] py-2 px-4 '> <FaArrowRight /> </button>
+                    <button className='text-white  font-bold mt-2 bg-[#2e8d05] py-2 px-4 flex'> Explore More <FaArrowRight /> </button>
 
                 </div>
             </div>

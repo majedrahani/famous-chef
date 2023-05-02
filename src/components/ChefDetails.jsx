@@ -1,9 +1,16 @@
 import React from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
+import RecipeCard from './RecipeCard';
 
 const ChefDetails = () => {
+    
+    const data = useLoaderData();
+    const {} = data
+    
+    
     return (
         <div>
-            <h3>details coming</h3>
+           <p>{data.name}</p>
         </div>
     );
 };
