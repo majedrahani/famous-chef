@@ -5,6 +5,7 @@ import Details from "../layouts/Details";
 import ChefDetails from "../components/ChefDetails";
 import LoginLayout from "../layouts/LoginLayout";
 import Login from "../registretion/Login";
+import Register from "../registretion/Register";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <Login></Login>
+      },
+      {
+        path: "register",
+        element: <Register></Register>
       }
     ]
   },
