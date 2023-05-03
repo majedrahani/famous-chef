@@ -10,7 +10,10 @@ const NavigationBer = () => {
                 <Link to='/' className='my-auto'>Home</Link>
                 <Link className='my-auto'>Blog</Link>
             </div>
+            <div className='flex gap-4'>
             <h3 className='my-auto'>Profile</h3>
+            <Link to="/loginLayout" className='btn-card my-4'>Login</Link>
+            </div>
         </div>
     );
 };
