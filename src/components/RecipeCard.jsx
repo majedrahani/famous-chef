@@ -12,7 +12,7 @@ const RecipeCard = ({ recipe }) => {
                     <p className='text-[8px]'><span className='text-[15px]'>Ingredients:</span> <br />{ingredients}</p>
                     <p>Rating: {rating}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Listen</button>
+                        <button className="btn-card">Favorite</button>
                     </div>
                 </div>
             </div>
