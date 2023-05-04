@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../public/logo.png'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../provider/AuthProvider';
 
 const NavigationBer = () => {
+    const {user,logOut} = useContext(AuthContext)
+
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch(error => console.log(error))
+    }
     return (
         <div className='flex justify-between px-8 mx-12 bg-white '>
             <img className='w-[120px]' src={logo} alt="" />
@@ -12,7 +20,9 @@ const NavigationBer = () => {
             </div>
             <div className='flex gap-4'>
             <h3 className='my-auto'>Profile</h3>
-            <Link to="/loginLayout" className='btn-card my-4'>Login</Link>
+            {user ?
+                <Link onClick={handleLogout}  className='btn-card my-4'>Log Out</Link>:
+            <Link to="/loginLayout" className='btn-card my-4'>Login</Link>}
             </div>
         </div>
     );
