@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Header = () => {
     return (
-        <div className="bg-[url('../../public/bg.png')] text-[#2e8d05]">
+        <div className="bg-[url('https://i.ibb.co/2sShGkz/bg.png')] text-[#2e8d05]">
             <NavigationBer></NavigationBer>
             <div className='pt-[250px] pb-[50px]'>
                 <div className='ml-24 p-8 bg-white w-[350px] bg-opacity-80'>
