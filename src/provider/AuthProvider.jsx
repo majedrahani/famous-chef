@@ -35,7 +35,7 @@ const AuthProvider = ({children}) => {
             setUser(loggedUser)
             
         })
-        return unsubscribe();
+        return ()=> {unsubscribe()};
     }, []);
 
     const logOut = () => {
@@ -48,6 +48,7 @@ const AuthProvider = ({children}) => {
 
     const authInfo = {
         user,
+        setUser,
         createUser,
         signIn,
         googleSignIn,
