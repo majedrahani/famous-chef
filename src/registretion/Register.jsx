@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
@@ -6,6 +6,7 @@ import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
+    const [error, setError] = useState('');
 
     const handleRegister = event => {
         event.preventDefault();
@@ -17,6 +18,10 @@ const Register = () => {
         const password = form.password.value;
 
         console.log(name, photo, email, password);
+
+        if(password.length < 6){
+            setError('Please add at least 6 character!')
+        }
 
         createUser(email, password)
             .then(result => {
@@ -78,9 +83,12 @@ const Register = () => {
                 </div>
                 <label className="label">
                     <p className='text-[10px] py-4 text-stone-900'>All ready have an account? <Link className='text-[#7ED957] font-bold '>Login</Link></p>
+                    
                 </label>
+                <p className=' text-orange-500'>{error}</p>
                 <div className="form-control mt-6">
                     <button className="btn-card">Register</button>
+                   
                 </div>
             </div>
         </form>

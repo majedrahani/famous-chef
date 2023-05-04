@@ -18,16 +18,7 @@ const Home = () => {
             
            <div className='p-16'>
            <h2 className='text-[40px] font-medium text-center mb-8'>Top Chef</h2>
-             <div className='grid grid-cols-3  gap-4'>
-            
-                {
-                    data.map(info => <ChefCard
-                        key={info.id}
-                        data={info}
-                    ></ChefCard>)
-                }
-
-            </div>
+             
            <div className='grid grid-cols-3  gap-4'>
             
             {

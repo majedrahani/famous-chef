@@ -1,8 +1,10 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
 const EmailLogin = () => {
+    const [error ,setError] = useState('')
+    
 
     const {signIn} = useContext(AuthContext)
 
@@ -20,16 +22,18 @@ const EmailLogin = () => {
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser)
-            navigate(from , {replace: true})
+            
         })
         .catch(error=>{
             console.log(error);
+            setError(error.message)
         })
     }
     return (
         <form onSubmit={handleSignIn} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mx-auto my-16">
-        <div className="card-body">
             
+        <div className="card-body">
+        <p className=' text-red-500'>{error}</p>
 
             <div className="form-control">
                 <label className="label">
@@ -46,7 +50,7 @@ const EmailLogin = () => {
             </div>
             
             <label className="label">
-                <p className='text-[10px] py-4 text-stone-900'>New to this site? <Link className='text-[#7ED957] font-bold '>Register</Link></p>
+                <p className='text-[10px] py-4 text-stone-900'>New to this site? <Link  className='text-[#7ED957] font-bold '>Register</Link></p>
             </label>
             <div className="form-control mt-6">
                 <button className="btn-card">Login</button>

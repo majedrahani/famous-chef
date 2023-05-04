@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Login = () => {
     const {googleSignIn,githubSignIn} = useContext(AuthContext)
+    
 
     const handleGoogleLogin = () =>{
         googleSignIn()
@@ -23,12 +24,13 @@ const Login = () => {
         })
         .catch(error =>{
             console.log(error);
+            
         })
     }
 
     return (
         <div>
-
+             
             <div className='bg-white p-16 my-24 mx-60'>
                  <button  className='py-2 rounded px-5 bg-lime-100 border-lime-400 border w-[100%]'><Link to="emailLogin">Email/Password</Link></button>
                  <button onClick={handleGoogleLogin} className='py-2 rounded px-5 bg-lime-100 border-lime-400 border w-[100%] my-4'>Login with Google</button>

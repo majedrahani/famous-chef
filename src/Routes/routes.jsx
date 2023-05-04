@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import Home from "../components/Home";
 import Details from "../layouts/Details";
@@ -9,6 +9,9 @@ import Register from "../registretion/Register";
 import EmailLogin from "../registretion/EmailLogin";
 import Google from "../registretion/Google";
 import Error from "../components/Error";
+import Blog from "../components/Blog";
+
+
 
 const router = createBrowserRouter([
   {
@@ -16,9 +19,11 @@ const router = createBrowserRouter([
     element: <LoginLayout></LoginLayout>,
     children: [
       {
-        path: '',
+        path: "",
         element: <Login></Login>
       },
+
+      
       {
         path: "emailLogin",
         element: <EmailLogin></EmailLogin>
@@ -41,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "blog",
+        element: <Blog></Blog>
       }
     ]
   },
