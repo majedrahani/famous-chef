@@ -21,7 +21,7 @@ const NavigationBer = () => {
             <div className='flex gap-4'>
             <h3 className='my-auto'>Profile</h3>
             {user ?
-                <Link onClick={handleLogout}  className='btn-card my-4'>Log Out</Link>:
+                <Link onClick={handleLogout}  className='btn-card my-4'>Logout</Link>:
             <Link to="/loginLayout" className='btn-card my-4'>Login</Link>}
             </div>
         </div>
