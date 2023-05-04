@@ -7,6 +7,7 @@ This is a Italian famous chef website. i have added many feturs in this site.
 1. email and pssword
 2. google
 3. github
+* you will see a blog page. there you show some mini article. and if you want download this as pdf.
 
 
 

@@ -49,9 +49,7 @@ const EmailLogin = () => {
 
             </div>
             
-            <label className="label">
-                <p className='text-[10px] py-4 text-stone-900'>New to this site? <Link  className='text-[#7ED957] font-bold '>Register</Link></p>
-            </label>
+            
             <div className="form-control mt-6">
                 <button className="btn-card">Login</button>
             </div>
