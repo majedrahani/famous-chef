@@ -5,9 +5,9 @@ import { AuthContext } from '../provider/AuthProvider';
 
 
 const NavigationBer = () => {
-    const {user,logOut} = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
 
-   
+
 
     const handleLogout = () => {
         logOut()
@@ -22,10 +22,16 @@ const NavigationBer = () => {
                 <Link className='my-auto'>Blog</Link>
             </div>
             <div className='flex gap-4'>
-            {user && <img src={user.photoURL} alt="" className='w-[40px] my-5 h-[40px] rounded-full' />}
-            {user ?
-                <Link onClick={handleLogout}  className='btn-card my-4'>Logout</Link>:
-            <Link to="/loginLayout" className='btn-card my-4'>Login</Link>}
+
+                {
+                    user &&
+                    <div className="tooltip tooltip-open tooltip-left" data-tip={user && user.displayName}>
+                        {user && <img src={user.photoURL} alt="" className='w-[40px] my-5 h-[40px] rounded-full' />} </div>
+                }
+
+                {user ?
+                    <Link onClick={handleLogout} className='btn-card my-4'>Logout</Link> :
+                    <Link to="/loginLayout" className='btn-card my-4'>Login</Link>}
             </div>
         </div>
     );
