@@ -6,6 +6,8 @@ import ChefDetails from "../components/ChefDetails";
 import LoginLayout from "../layouts/LoginLayout";
 import Login from "../registretion/Login";
 import Register from "../registretion/Register";
+import EmailLogin from "../registretion/EmailLogin";
+import Google from "../registretion/Google";
 
 const router = createBrowserRouter([
   {
@@ -17,9 +19,17 @@ const router = createBrowserRouter([
         element: <Login></Login>
       },
       {
+        path: "emailLogin",
+        element: <EmailLogin></EmailLogin>
+      },
+      {
+        path: "google",
+        element: <Google></Google>
+      },
+      {
         path: "register",
         element: <Register></Register>
-      }
+      },
     ]
   },
   {
