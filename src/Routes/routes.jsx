@@ -8,6 +8,7 @@ import Login from "../registretion/Login";
 import Register from "../registretion/Register";
 import EmailLogin from "../registretion/EmailLogin";
 import Google from "../registretion/Google";
+import Error from "../components/Error";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",

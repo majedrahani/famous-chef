@@ -2,9 +2,13 @@ import React, { useContext } from 'react';
 import logo from '../../public/logo.png'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import { getStoredCart } from '../utility/fakeDb';
 
 const NavigationBer = () => {
     const {user,logOut} = useContext(AuthContext)
+
+    const userProfile = getStoredCart()
+    console.log(userProfile);
 
     const handleLogout = () => {
         logOut()
@@ -19,7 +23,7 @@ const NavigationBer = () => {
                 <Link className='my-auto'>Blog</Link>
             </div>
             <div className='flex gap-4'>
-            <h3 className='my-auto'>Profile</h3>
+            {user && <img src={userProfile} alt="" className='w-[40px] my-5 h-[40px] rounded-full' />}
             {user ?
                 <Link onClick={handleLogout}  className='btn-card my-4'>Logout</Link>:
             <Link to="/loginLayout" className='btn-card my-4'>Login</Link>}

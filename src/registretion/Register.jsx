@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import { addToDb } from '../utility/fakeDb';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
@@ -24,6 +25,8 @@ const Register = () => {
             .catch(error => {
                 console.log(error);
             })
+
+        addToDb(photo)    
 
 
     }
