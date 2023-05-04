@@ -51,7 +51,7 @@ const router = createBrowserRouter([
       {
         path: ":id",
         element: <ChefDetails></ChefDetails>,
-        loader: ({ params }) => fetch(`http://localhost:3000/data/${params.id}`)
+        loader: ({ params }) => fetch(`https://famous-chef-server-majedrahani.vercel.app/data/${params.id}`)
       }
     ]
   }

@@ -8,7 +8,7 @@ const Home = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/data')
+        fetch('https://famous-chef-server-majedrahani.vercel.app/data')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])

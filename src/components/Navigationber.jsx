@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import logo from '../../public/logo.png'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import ActiveLink from '../activeLink/ActiveLink';
 
 
 const NavigationBer = () => {
@@ -17,8 +18,8 @@ const NavigationBer = () => {
     return (
         <div className='flex justify-between px-8 mx-12 bg-white '>
             <img className='w-[120px]' src={logo} alt="" />
-            <div className="flex gap-4 ">
-                <Link to='/' className='my-auto'>Home</Link>
+            <div className="flex gap-4 my-6 ">
+                <ActiveLink to='/' className='my-auto'>Home</ActiveLink>
                 <Link className='my-auto'>Blog</Link>
             </div>
             <div className='flex gap-4'>
