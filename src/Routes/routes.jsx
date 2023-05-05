@@ -10,6 +10,7 @@ import EmailLogin from "../registretion/EmailLogin";
 import Google from "../registretion/Google";
 import Error from "../components/Error";
 import Blog from "../components/Blog";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: ":id",
-        element: <ChefDetails></ChefDetails>,
+        element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`https://famous-chef-server-majedrahani.vercel.app/data/${params.id}`)
       }
     ]
