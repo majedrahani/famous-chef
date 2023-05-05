@@ -4,7 +4,7 @@ const Review = () => {
     return (
         <div className='bg-lime-100'>
             <h2 className='text-[40px] font-medium text-center'>Reviews</h2>
-            <div className='p-8 my-auto bg-lime-100 grid gap-2 grid-cols-3'>
+            <div className='p-8 my-auto bg-lime-100 grid gap-2 grid-cols-1 lg:grid-cols-3'>
             
             <div className='p-6 bg-white rounded '>
                 <img className='w-[60px]' src="https://i.ibb.co/Kr382P3/3.png" alt="" />

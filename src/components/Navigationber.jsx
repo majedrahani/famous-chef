@@ -16,7 +16,7 @@ const NavigationBer = () => {
             .catch(error => console.log(error))
     }
     return (
-        <div className='flex justify-between px-8 mx-12 bg-white '>
+        <div className='grid grid-cols-3 lg:flex justify-between lg:px-8 lg:mx-12 bg-white '>
             <img className='w-[120px]' src={logo} alt="" />
             <div className="flex gap-4 my-6 ">
                 <Link to='/' className='my-auto'>Home</Link>

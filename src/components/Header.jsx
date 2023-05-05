@@ -7,8 +7,8 @@ const Header = () => {
     return (
         <div className="bg-[url('https://i.ibb.co/2sShGkz/bg.png')] text-[#2e8d05]">
             <NavigationBer></NavigationBer>
-            <div className='pt-[250px] pb-[50px]'>
-                <div className='ml-24 p-8 bg-white w-[350px] bg-opacity-80'>
+            <div className=' p-4 lg:pt-[250px] lg:pb-[50px]'>
+                <div className='lg:ml-24 p-8 bg-white w-[350px] bg-opacity-80'>
                     <p className='font-bold text-3xl'>Make some unique recipes at home</p>
 
                     <small>Contact</small>

@@ -16,10 +16,10 @@ const Home = () => {
         <div>
             <SiteInfo></SiteInfo>
             
-           <div className='p-16'>
+           <div className='p-4 lg:p-16'>
            <h2 className='text-[40px] font-medium text-center mb-8'>Top Chef</h2>
              
-           <div className='grid grid-cols-3  gap-4'>
+           <div className='grid grid-cols-1 lg:grid-cols-3  gap-4'>
             
             {
                 data.map(info => <ChefCard

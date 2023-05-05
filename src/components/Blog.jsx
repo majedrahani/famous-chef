@@ -1,13 +1,20 @@
 import React from 'react';
 import { HiDocumentDownload } from "react-icons/hi";
+import Pdf from "react-to-pdf";
+
+
+const ref = React.createRef();
 
 const Blog = () => {
     return (
        <div >
-        <button className='flex gap-2 btn-card m-4'>PDF Download
+         <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <button onClick={toPdf} className='flex gap-2 btn-card m-4'>PDF Download
         <HiDocumentDownload className='my-auto'></HiDocumentDownload>
-        </button>
-         <div className='grid grid-cols-2 p-16 gap-4 '>
+        </button>}
+      </Pdf>
+        
+         <div ref={ref} className='grid grid-cols-2 p-16 gap-4 '>
             <div className='rounded bg-lime-100 p-8'>
                 <h2 className='text-[12px] font-bold'>Tell us the differences between uncontrolled and controlled components.</h2>
                 <p className='text-[10px] text-zinc-700'> The primary difference between controlled and uncontrolled components is related to how they handle their value. Uncontrolled components pass down the value through props. In contrast, controlled components use state to handle the value internally.</p>
