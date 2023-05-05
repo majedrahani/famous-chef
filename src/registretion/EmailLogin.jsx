@@ -2,8 +2,9 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
-const EmailLogin = () => {
+const EmailLogin = ({fromm}) => {
     const [error ,setError] = useState('')
+    const navigate = useNavigate();
     
 
     const {signIn} = useContext(AuthContext)
@@ -22,6 +23,7 @@ const EmailLogin = () => {
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser)
+            navigate(fromm, {replace: true})
             
         })
         .catch(error=>{
@@ -30,10 +32,10 @@ const EmailLogin = () => {
         })
     }
     return (
-        <form onSubmit={handleSignIn} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mx-auto my-16">
+        <form onSubmit={handleSignIn} className="card flex-shrink-0 max-w-sm bg-lime-100 border-lime-400 border w-[100%] p-4 mx-auto my-4">
             
-        <div className="card-body">
-        <p className=' text-red-500'>{error}!</p>
+        <div className="">
+        <p className=' text-red-500'>{error}</p>
 
             <div className="form-control">
                 <label className="label">

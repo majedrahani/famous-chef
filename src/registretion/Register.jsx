@@ -81,10 +81,7 @@ const Register = () => {
                     </label>
                     <input type="text" name='photo' placeholder="Photo Url" className="input input-bordered" />
                 </div>
-                <label className="label">
-                    <p className='text-[10px] py-4 text-stone-900'>All ready have an account? <Link className='text-[#7ED957] font-bold '>Login</Link></p>
-                    
-                </label>
+               
                 <p className=' text-orange-500'>{error}</p>
                 <div className="form-control mt-6">
                     <button className="btn-card">Register</button>
